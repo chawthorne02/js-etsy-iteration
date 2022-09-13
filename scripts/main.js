@@ -33,5 +33,38 @@ print.forEach(function(item){
 })
 
 
-//4 
+//4 Show me how to find which items are made of wood. Please console.log the ones you find.
+
+let materialType  = items.filter(function(item){
+    return item.materials.includes("wood");
+    
+})
+console.log(materialType)
+materialType.forEach(function(item){
+    console.log(item.title, "Is made of wood");
+})
+
+//5 Show me how to find which items are made of eight or more materials. Please console.log the ones you find.
+
+let materialLength  = items.filter(function(item){
+    return item.materials.length >= 8;
+})
+console.log(materialLength);
+
+materialLength.forEach(function(item){
+    console.log(item.title, "has", item.materials.length, "materials", item.materials);
+})
+
+
+//6 Show me how to calculate how many items were made by their sellers. Please console.log your answer.
+
+let seller  = items.filter(function(item){
+    return item.who_made === "i_did";
+})
+console.log(seller)
+
+seller.forEach(function(item){
+    console.log(`${seller.length} 'were made by their sellers`);
+})
+
 
